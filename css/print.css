@@ -1,0 +1,45 @@
+/* print styles */
+@page {
+  margin: 0 1cm 0 1cm;
+}
+
+@media print {
+
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+  }
+
+
+
+  /* body {
+    background-color: #ffffff !important;
+  } */
+  [data-cy='footer'],
+  nav,
+  [name='reportHeader'],
+  footer,
+  [data-cy='backButton'],
+  [data-cy='downloadPDF'] {
+    display: none !important;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tfoot {
+    display: table-footer-group;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+
+  #printContainer {
+    display: block !important;
+    box-shadow: none;
+    height: auto;
+  }
+}
