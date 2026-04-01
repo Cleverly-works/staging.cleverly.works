@@ -296,7 +296,7 @@
       </div>
     </div>
 
-    <div class="click-hint" id="hint">click anywhere...</div>
+    <div class="click-hint" id="hint"></div>
 
     <div class="reveal" id="reveal">
       <h1>April Fools!</h1>
@@ -324,18 +324,11 @@
 
         if (progress >= 100) {
           clearInterval(interval)
-          setTimeout(() => {
-            hintEl.classList.add("visible")
-          }, 800)
+          setTimeout(showReveal, 1200)
         }
       }, 400)
 
-      let revealed = false
-
-      document.addEventListener("click", () => {
-        if (revealed || progress < 100) return
-        revealed = true
-
+      function showReveal() {
         const glitch = document.getElementById("glitch")
         glitch.classList.add("active")
 
@@ -364,7 +357,7 @@
             reveal.appendChild(emoji)
           }
         }, 500)
-      })
+      }
 
       function createConfetti() {
         const colors = [
