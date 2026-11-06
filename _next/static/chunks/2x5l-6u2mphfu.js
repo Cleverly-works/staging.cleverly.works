@@ -1,0 +1,1384 @@
+(()=>{"use strict";(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,443919,e=>{var t=e.i(391398),n=e.i(191788),i=e.i(280445),r=e.i(222351),a=e.i(738251),o=e.i(115871),s=e.i(755548),d=e.i(813843),u=e.i(741850),l=e.i(376733),c=e.i(411331),m=e.i(377198);let p=["gmail.com","outlook.com","hotmail.com","yahoo.com","icloud.com","mail.com","protonmail.com","tutanota.com","live.com","msn.com","aol.com","zoho.com","fastmail.com"];var f=e.i(889231),y=e.i(396413);let h=(0,i.f)("div")`
+  background-color: #fff;
+  box-shadow: rgba(53, 64, 82, 0.05) 0 0 14px 0;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  padding: 1rem 0;
+`,b=(0,i.f)("div")`
+  position: relative;
+  display: inline-block;
+  border-radius: ${e=>{let{logoUrl:t}=e;return t?"2px":"50%"}};
+  overflow: hidden;
+
+  .edit-text {
+    width: 100%;
+    text-align: center;
+    border-radius: ${e=>{let{logoUrl:t}=e;return t?"0px 0px 2px 2px":"0"}};
+  }
+
+  &:hover .edit-text {
+    opacity: 1;
+  }
+
+  & .MuiAvatar-root {
+    overflow: hidden;
+    border-radius: ${e=>{let{logoUrl:t}=e;return t?"2px":"50%"}};
+    ${e=>{let{logoUrl:t}=e;return t?"height: 55px; width: auto; min-width: 55px;":"height: 55px; width: 55px;"}}
+  }
+`,v=(0,i.f)("div")`
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 2px 10px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+`;e.s(["f",0,e=>{let{avatar:i,editable:I=!0,entity:x,entityName:g,linkTitleTo:j,relatedParties:A,onEdit:_,refetch:C}=e,R=(0,c.f)(),[S,T]=(0,n.useState)(null),[E,$]=(0,n.useState)(!1),w=(e=>{if(!e)return null;let t=null;t=e.includes("@")?(e=>{if(!e||!e.includes("@"))return null;try{let t=e.split("@")[1]?.toLowerCase();if(t&&!p.includes(t))return t;return null}catch(e){return null}})(e):(e=>{if(!e)return null;try{let t=e.replace(/^https?:\/\//,""),n=(t=t.replace(/^www\./,"")).split("/")[0];return n?.split(":")[0]||null}catch(e){return null}})(e);let n="pk_SDViFiouRqKwmhMyKrGTAQ";if(!t||!n)return null;let i=new URLSearchParams({size:"128",format:"png",fallback:"monogram",retina:"true",token:n});return`https://img.logo.dev/${encodeURIComponent(t)}?${i.toString()}`})(x.website||x.manager?.email),N=A&&A.length>0,P=(0,m.f)(S);(0,n.useEffect)(()=>{i?(T(i),$(!1)):w?(T(w),$(!0)):(T(null),$(!1))},[i,w]);let q=e=>{let[t]=e;R.close(),T(t?.filename||null)};return(0,t.jsx)(h,{children:(0,t.jsxs)(d.f,{px:1.5,direction:"row",children:[(0,t.jsx)(d.f,{alignSelf:"center",fontSize:0,flexShrink:0,children:(0,t.jsxs)(b,{logoUrl:E,children:[(0,t.jsx)(r.f,{content:x?.name,src:P,onClick:I?()=>{R.show({content:(0,t.jsx)(y.f,{category:"avatar",entity:g,entityId:x?.id,filters:{category:"avatar"},onMediaAdd:q,refetch:C,type:"image"}),title:"Avatar"})}:void 0,style:{cursor:I?"pointer":"default"}}),I&&(0,t.jsx)(v,{className:"edit-text",children:"Edit"})]})}),(0,t.jsxs)(d.f,{pl:1.5,flex:N?1:void 0,minWidth:N?0:void 0,children:[(0,t.jsxs)(o.f,{color:"text.primary",fontSize:17,children:[j?(0,t.jsx)(f.f,{href:j,sx:{color:"secondary.main"},children:x?.name}):x?.name,x?.description&&(x?.descriptionLink?(0,t.jsx)(f.f,{href:x?.descriptionLink,target:"_blank",underline:"none",children:(0,t.jsx)(o.f,{color:"text.secondary",variant:"body2",fontSize:14,mb:.5,children:x?.description})}):(0,t.jsx)(o.f,{color:"text.secondary",variant:"body2",fontSize:14,mb:.5,children:x?.description})),x?.website&&(0,t.jsx)(f.f,{href:x?.website.startsWith("http")?x?.website:`http://${x?.website}`,sx:{verticalAlign:"sub"},rel:"nofollow noopener noreferrer",target:"_blank",children:(0,t.jsx)(u.default,{color:"secondary",sx:{fontSize:"16px",ml:.75,mb:"1px"}})})]}),N&&(0,t.jsxs)(d.f,{direction:"row",alignItems:"center",justifyContent:"space-between",gap:1,children:[(0,t.jsxs)(o.f,{color:"text.secondary",variant:"body2",fontSize:14,minWidth:0,children:[(0,t.jsx)(a.f,{component:"span",children:"Related party: "}),A.map((e,n)=>(0,t.jsxs)("span",{children:[n>0&&", ",(0,t.jsx)(f.f,{href:`/dashboard/customers/view?id=${e.id}`,color:"secondary",underline:"hover",children:e.name})]},e.id))]}),I&&!!_&&(0,t.jsxs)(s.f,{onClick:_,type:"button",size:"small",variant:"contained",color:"secondary",sx:{fontSize:"12px",height:"24px",flexShrink:0},children:[(0,t.jsx)(l.default,{sx:{fontSize:"12px",mr:.5}}),"Edit"]})]}),I&&!N&&(0,t.jsx)(d.f,{direction:"row",justifyContent:"flex-start",children:!!_&&(0,t.jsxs)(s.f,{onClick:_,type:"button",size:"small",variant:"contained",color:"secondary",sx:{fontSize:"12px",height:"24px"},children:[(0,t.jsx)(l.default,{sx:{fontSize:"12px",mr:.5}}),"Edit"]})})]})]})})}],443919)},239189,e=>{e.s(["N",0,["serviceRate","rebate"],"O",0,{serviceRate:"Service Rate",rebate:"Rebate"},"e",0,["grossPercent","costPlus"]])},890350,e=>{var t,n,i,r=((t={}).SUPER_ADMIN="superadmin",t.ADMIN="admin",t.CUSTOMER="customer",t.SUPPLIER="supplier",t.TENANT="tenant",t),a=((n={}).VERIFIED="verified",n.UNVERIFIED="unverified",n),o=((i={}).CLEVERLY="cleverly",i.XERO="xero",i.BIDIRECTIONAL="bidirectional",i.NONE="none",i);e.s(["d",()=>r,"T",()=>a,"$",()=>o])},518566,277984,841879,e=>{var t,n,i=((t={}).CustomerGroupInvoice="customerGroupInvoice",t.CustomerPpmInvoice="customerPpmInvoice",t.CustomerVat="customerVat",t.ProformaInvoiceCustomer="ProformaInvoiceCustomer",t.ProformaInvoiceSupplier="ProformaInvoiceSupplier",t.Supplier="supplier",t.SupplierPpmInvoice="supplierPpmInvoice",t);e.s(["f",()=>i],518566);var r=((n={}).INVOICE="invoice",n.PROFORMA_INVOICE="proformaInvoice",n.CREDIT_NOTE="creditNote",n.PAYMENT_RECEIPT="paymentReceipt",n.CUSTOMER_PPM_INVOICE="customerPpmInvoice",n.CUSTOMER_GROUP_INVOICE="customerGroupInvoice",n.SUPPLIER_PPM_INVOICE="supplierPpmInvoice",n);e.s(["f",()=>r],277984);let a={[r.CREDIT_NOTE]:"credit-note",[r.CUSTOMER_GROUP_INVOICE]:"customer-group",[r.CUSTOMER_PPM_INVOICE]:"customer-ppm",[r.SUPPLIER_PPM_INVOICE]:"supplier-ppm",[r.PROFORMA_INVOICE]:"proforma"},o={[i.CustomerVat]:"customer-vat",[i.Supplier]:"supplier"};e.s(["f",0,(e,t)=>{let n=e.type===r.INVOICE?o[t]:a[e.type],i="credit-note"===n?String(e.id):e.invoiceNumber;return n&&i?{type:n,number:i,id:e.id}:null}],841879)},436703,e=>{e.s(["f",0,e=>{let t=e&&e.length>0&&e.find(e=>e.medium?.category==="avatar");if(!t)return null;let n=t?.medium?.meta?.thumbnails,i=n?.find?.(e=>"small"===e.name);return i?.relativePath||t.medium.filename||null}])},209906,e=>{var t=e.i(159080),n=e.i(987123);let i=t.f`
+  query GetJob($adminId: Int!, $number: String!) {
+    job: Job(where: { adminId: { _eq: $adminId }, number: { _eq: $number } }) {
+      id
+      issueReportedDescription
+      number
+      invoiceNumber
+      adminId
+      title
+      description
+      reference
+      referenceSupplier
+      access
+      aiSummary
+      costCategory
+      pricing
+      supplierPricing
+      timing
+      timingStart
+      timingEnd
+      timingNormalHours
+      paymentMethod
+      customerSpendThreshold
+      supplierSpendThreshold
+      thresholdInformation
+      time
+      amount
+      amountOutstanding
+      invoicedToDate
+      reconciledAmount
+      amountToBeInvoiced
+      amountOutstandingSupplier
+      invoicedToDateSupplier
+      reconciledAmountSupplier
+      amountToBeInvoicedSupplier
+      supplierLabourAmount
+      supplierMaterialsAmount
+      source
+      discount
+      timingStatus
+      correctDuration
+      correctStart
+      correctEnd
+      reportPassFail
+      reportPassFailTitle
+      requireReportRecommendations
+      estimatedDuration
+      estimatedDurationUnit
+      anyTimeOption
+      hourStart
+      hourEnd
+      onSiteTimingEnd
+      jobReportTimingEnd
+      quoteReturnedTimingEnd
+      issueReportedDescription
+      permitsLinks
+      relatedLinks
+      supplierVatTotal: supplierFinances(path: "amountInfo.vatTotal")
+      reverseCharge
+      cisPercentage
+      assetCategory: AssetCategory {
+        name
+        id
+      }
+      assets: Assets(where: { entity: { _eq: "Job" } }) {
+        id
+        status
+        entityId
+        asset: Asset {
+          id
+          name
+        }
+      }
+      issueTypes: Taxonomy(
+        where: {
+          entity: { _eq: "Job" }
+          Taxonomy: { status: { _eq: "active" }, type: { _eq: "issueType" } }
+        }
+      ) {
+        id
+        issue: Taxonomy {
+          id
+          name
+        }
+      }
+      tags: Taxonomy(
+        where: {
+          entity: { _eq: "Job" }
+          Taxonomy: { status: { _eq: "active" }, type: { _eq: "tags" } }
+        }
+      ) {
+        id
+        createdAt
+        meta
+        tag: Taxonomy {
+          id
+          name
+          meta
+          type
+        }
+      }
+      customerCustomVat: meta(path: "customerCustomVat")
+      customer: Customer {
+        meta
+        defaultVatRate
+      }
+      supplierDeposit
+      rebate
+      status
+      workStatus
+      supplierNotes
+      ppm
+      quoted
+      quoteNumber
+      quoteDue
+      quoteDueSupplier
+      statusData
+      scheduledAt
+      createdAt
+      updatedAt
+      supplierId
+      supplierUserId
+      customerId
+      customerUserId
+      locationId
+      managerId
+      parentId
+      serviceId
+      slaId
+      siteVisitStart
+      siteVisitEnd
+      siteVisitWeekends
+      tenantId
+      quoteCharge
+      quoteChargeAmount
+      jobScheduleId
+      type
+      meta
+      jobMap
+      assetsMap
+      customerFinances
+      compliance: Compliance {
+        id
+        name
+        complianceCategory: ComplianceCategory {
+          id
+          name
+        }
+        parentCompliance: ParentCompliance {
+          id
+          name
+        }
+      }
+
+      admin: Admin {
+        id
+        name
+        meta
+        bankAccounts: BankAccounts {
+          id
+          bank
+          stripeId
+          accountNumber
+          routingNumber
+          bic
+          iban
+          status
+          default
+          createdAt
+          meta
+        }
+        addresses: Addresses {
+          id
+          registered
+          operating
+          trading
+          invoice
+          status
+          createdAt
+          address: Address {
+            id
+            name
+            addressLine1
+            addressLine2
+            addressLine3
+            city
+            county
+            geo
+            postCode
+            country: Country {
+              id
+              name
+            }
+          }
+        }
+      }
+      customer: Customer {
+        id
+        companyNumber
+        createdAt
+        name
+        status
+        type
+        updatedAt
+        website
+        clientType
+        managerId
+        vatId
+        defaultVatRate
+        meta
+        media: Media {
+          id
+          medium: Medium {
+            id
+            category
+            filename
+            meta
+            type
+          }
+        }
+        manager: Manager {
+          id
+          fullName
+        }
+        financial: Financial {
+          id
+          amountOutstanding
+          approvalThreshold
+          arrangementFee
+          createdAt
+          creditLimit
+          creditRating
+          defaultPaymentMethod
+          invoicing
+          serviceRate
+          spendThreshold
+          stripeId
+          totalRevenue
+          unpaidInvoices
+        }
+        slas: SLAs(where: { entity: { _eq: "Account" } }) {
+          id
+          entity
+          entityId
+          onSite
+          onSiteUnit
+          jobReport
+          jobReportUnit
+          completion
+          completionUnit
+          notes
+          inUse
+          normalRate
+          oohRate
+          premiumRate
+          minimumInterval
+          minimumLength
+          slaId
+          sla: SLA {
+            id
+            name
+            notes
+            normalRate
+            oohRate
+            premiumRate
+            onSite
+            onSiteUnit
+            jobReport
+            jobReportUnit
+            completion
+            completionUnit
+            minimumInterval
+            minimumLength
+          }
+        }
+        services: Services(where: { entity: { _eq: "Account" } }) {
+          id
+          dayRate
+          dayRateOOH
+          dayRatePremium
+          hourRate
+          hourRateOOH
+          hourRatePremium
+          meta
+          minimumInterval
+          minimumLength
+          callOutHourRate
+          callOutHourRateOOH
+          callOutHourRatePremium
+          notes
+          delivery
+          createdAt
+          updatedAt
+          entity
+          entityId
+          serviceId
+        }
+        addresses: Addresses(where: { entity: { _eq: "Account" } }) {
+          ...AddressEntityFields
+          address: Address {
+            ...AddressFields
+            country: Country {
+              id
+              name
+            }
+          }
+        }
+        media: Media {
+          id
+          medium: Medium {
+            id
+            category
+            filename
+            meta
+            type
+          }
+        }
+      }
+      customerUser: CustomerUser {
+        id
+        name: nameFirst
+        nameFirst
+        nameLast
+        phone
+        status
+        email
+        createdAt
+        fullName
+        meta
+        accounts: Account_Users {
+          id
+          role
+          position
+          isContact
+          status
+          account: Account {
+            id
+            name
+            type
+          }
+        }
+      }
+      expenses: Expenses {
+        id
+        amount
+        description
+        markup
+        total
+        unit
+        vat
+        paid
+      }
+      sublocation: Sublocation {
+        id
+        name
+      }
+      location: Location {
+        id
+        access
+        createdAt
+        name
+        contactUserId
+        permitsRequired
+        addresses: Addresses(where: { entity: { _eq: "Location" } }) {
+          ...AddressEntityFields
+          address: Address {
+            ...AddressFields
+            countryId
+            country: Country {
+              id
+              name
+              code
+            }
+          }
+        }
+        slas: SLAs(where: { entity: { _eq: "Location" } }) {
+          id
+          entity
+          entityId
+          onSite
+          onSiteUnit
+          jobReport
+          jobReportUnit
+          completion
+          completionUnit
+          notes
+          inUse
+          normalRate
+          oohRate
+          premiumRate
+          minimumInterval
+          minimumLength
+          slaId
+          sla: SLA {
+            id
+            name
+            notes
+            normalRate
+            oohRate
+            premiumRate
+            onSite
+            onSiteUnit
+            jobReport
+            jobReportUnit
+            completion
+            completionUnit
+            minimumInterval
+            minimumLength
+          }
+        }
+        services: Services(where: { entity: { _eq: "Location" } }) {
+          id
+          dayRate
+          dayRateOOH
+          dayRatePremium
+          hourRate
+          hourRateOOH
+          hourRatePremium
+          meta
+          minimumInterval
+          minimumLength
+          callOutHourRate
+          callOutHourRateOOH
+          callOutHourRatePremium
+          notes
+          delivery
+          createdAt
+          updatedAt
+          entity
+          entityId
+          serviceId
+        }
+      }
+      financeLogs: JobFinanceLogs(order_by: { createdAt: desc }) {
+        id
+        type
+        value
+        difference
+        createdAt
+      }
+      manager: Manager {
+        id
+        name: nameFirst
+        nameFirst
+        nameLast
+        phone
+        status
+        email
+        createdAt
+        fullName
+        accounts: Account_Users {
+          id
+          role
+          position
+          isContact
+          status
+          account: Account {
+            id
+            name
+            type
+          }
+        }
+      }
+      quotations: SupplierQuotes(
+        where: { status: { _neq: "cancelled" } }
+        order_by: { quoteNumber: asc }
+      ) {
+        id
+        createdAt
+        jobId
+        methodStatement
+        notes
+        quoteNumber
+        startDate
+        rebate
+        recommended
+        status
+        totalDuration
+        totalDurationUnit
+        durationPrefix
+        noticePeriod
+        noticePeriodUnit
+        meta
+        updatedAt
+        siteVisitAt
+        type
+        accountId
+        lineItems: SupplierQuoteLineItems {
+          id
+          description
+          item
+          qty
+          qtyUnit
+          quoteId
+          supplierTotal
+          customerTotal
+          type
+          unitRate
+          customerUnitRate
+        }
+        supplier: Supplier {
+          id
+          companyNumber
+          createdAt
+          name
+          status
+          type
+          updatedAt
+          website
+          clientType
+          managerId
+          vatId
+          meta
+          accountUsers: Account_Users {
+            user: User {
+              id
+              fullName
+              nameFirst
+              nameLast
+              phone
+              email
+            }
+          }
+          media: Media {
+            id
+            medium: Medium {
+              id
+              category
+              filename
+              meta
+              type
+            }
+          }
+          manager: Manager {
+            id
+            fullName
+          }
+        }
+        media: Media(where: { entity: { _eq: "Quotation" } }) {
+          id
+        }
+      }
+      report: JobReport {
+        id
+        completion
+        meta
+        notes
+        timing
+        passFailStatus
+        recommendations
+        comments
+        createdAt
+        updatedAt
+      }
+      service: Service {
+        id
+        name
+        countryId
+        currencyId
+        customerDayRate
+        customerDayRateOOH
+        customerDayRatePremium
+        customerHourRate
+        customerHourRateOOH
+        customerHourRatePremium
+        supplierDayRate
+        supplierDayRateOOH
+        supplierDayRatePremium
+        supplierHourRate
+        supplierHourRateOOH
+        supplierHourRatePremium
+        minimumInterval
+        minimumLength
+      }
+      sla: SLA {
+        id
+        name
+        notes
+        normalRate
+        oohRate
+        premiumRate
+        onSite
+        onSiteUnit
+        jobReport
+        jobReportUnit
+        completion
+        completionUnit
+        minimumInterval
+        minimumLength
+      }
+      media: Media(where: { entity: { _eq: "Job" } }) {
+        id
+        item: Medium {
+          id
+          name
+          type
+          filename
+          category
+          meta
+        }
+      }
+      relatedCustomers: JobRelatedCustomers {
+        id
+        accountId
+      }
+      supplier: Supplier {
+        id
+        companyNumber
+        createdAt
+        name
+        status
+        type
+        updatedAt
+        website
+        clientType
+        managerId
+        vatId
+        meta
+        reverseCharge
+        cisStatus
+        media: Media {
+          id
+          medium: Medium {
+            id
+            category
+            filename
+            meta
+            type
+          }
+        }
+        manager: Manager {
+          id
+          fullName
+        }
+        contactUsers: Account_Users(where: { isContact: { _eq: true } }) {
+          role
+          position
+          isContact
+          lastSignInAt
+          userId
+          user: User {
+            id
+            name: nameFirst
+            nameFirst
+            nameLast
+            phone
+            status
+            email
+            createdAt
+            fullName
+            accounts: Account_Users {
+              id
+              role
+              position
+              isContact
+              status
+              account: Account {
+                id
+                name
+                type
+              }
+            }
+          }
+        }
+        addresses: Addresses(where: { entity: { _eq: "Account" } }) {
+          ...AddressEntityFields
+          address: Address {
+            ...AddressFields
+            country: Country {
+              id
+              name
+            }
+          }
+        }
+        services: Services(where: { entity: { _eq: "Account" } }) {
+          id
+          dayRate
+          dayRateOOH
+          dayRatePremium
+          hourRate
+          hourRateOOH
+          hourRatePremium
+          meta
+          minimumInterval
+          minimumLength
+          callOutHourRate
+          callOutHourRateOOH
+          callOutHourRatePremium
+          notes
+          delivery
+          createdAt
+          updatedAt
+          entity
+          entityId
+          serviceId
+        }
+      }
+      supplierUser: SupplierUser {
+        id
+        meta
+        name: nameFirst
+        nameFirst
+        nameLast
+        phone
+        status
+        email
+        createdAt
+        fullName
+        accounts: Account_Users {
+          id
+          role
+          position
+          isContact
+          status
+          account: Account {
+            id
+            name
+            type
+          }
+        }
+      }
+      supplierOffers: SupplierOffers {
+        id
+        status
+        rate
+        dayRate
+        meta
+        heldSupplierUserId
+        heldScheduledAt
+        heldAt
+        heldByUserId
+        notes
+        statusLog
+        accountId
+        account: Supplier {
+          id
+          companyNumber
+          createdAt
+          name
+          status
+          type
+          updatedAt
+          website
+          clientType
+          managerId
+          vatId
+          meta
+          serviceSchedules: ServiceSchedule(
+            where: { status: { _eq: "active" }, entity: { _eq: "Supplier" } }
+          ) {
+            id
+            serviceId
+            normal
+            ooh
+            premium
+          }
+          media: Media {
+            id
+            medium: Medium {
+              id
+              category
+              filename
+              meta
+              type
+            }
+          }
+          manager: Manager {
+            id
+            fullName
+          }
+        }
+      }
+      tenant: Tenant {
+        id
+        companyNumber
+        createdAt
+        name
+        status
+        type
+        updatedAt
+        website
+        clientType
+        managerId
+        vatId
+        meta
+        media: Media {
+          id
+          medium: Medium {
+            id
+            category
+            filename
+            meta
+            type
+          }
+        }
+        manager: Manager {
+          id
+          fullName
+        }
+      }
+      tenantUser: TenantUser {
+        id
+        fullName
+        nameFirst
+        nameLast
+        email
+        phone
+      }
+      timings: JobTimings(order_by: { id: desc }) {
+        id
+        status
+        notes
+        meta
+        quoteId
+        createdAt
+        user: User {
+          id
+          fullName
+        }
+      }
+      shortJobDesc: Taxonomy(where: { Taxonomy: { type: { _eq: "jobTags" } } }) {
+        id
+        taxonomyId
+        comments
+        taxonomy: Taxonomy {
+          name
+          meta
+        }
+      }
+      quoteSummary: Taxonomy(where: { Taxonomy: { type: { _eq: "quoteSummary" } } }) {
+        id
+        taxonomyId
+        comments
+        taxonomy: Taxonomy {
+          name
+          meta
+        }
+      }
+      answers: Taxonomy(
+        where: { Taxonomy: { type: { _eq: "jobQuestion" } } }
+        order_by: { taxonomyId: asc }
+      ) {
+        id
+        taxonomyId
+        comments
+        taxonomy: Taxonomy {
+          name
+        }
+      }
+      costCategoryTaxonomy: CostCategory {
+        id
+        name
+      }
+      parentJob: ParentJob {
+        createdAt
+        id
+        number
+        reference
+        status
+        title
+        type
+      }
+      childJobs: Jobs {
+        createdAt
+        id
+        number
+        reference
+        status
+        title
+        type
+      }
+      compliance: Compliance {
+        id
+      }
+      form: FormSubmissions(where: { entity: { _in: ["Job", "Ppm"] } }) {
+        id
+        formId
+        formFields
+        submissionData
+        entity
+        entityId
+        type
+        pdfGenerationStatus
+        pdfGenerationId
+        form: FormSubmissionsForm {
+          name
+          status
+          description
+          settings
+          updatedAt
+        }
+      }
+    }
+  }
+  ${n.a}
+  ${n.S}
+`;t.f`
+  mutation MyMutation($objects: [CreateJobInput]!, $adminId: Int!) {
+    createJob(adminId: $adminId, objects: $objects) {
+      data
+    }
+  }
+`;let r=t.f`
+  mutation UpdateJob($id: Int!, $changes: Job_set_input) {
+    update_Job_by_pk(pk_columns: { id: $id }, _set: $changes) {
+      id
+      status
+    }
+  }
+`;t.f`
+  query GetIssueTypesForSelect {
+    issueTypes: Taxonomy(where: { type: { _eq: "issueType" } }) {
+      value: id
+      label: name
+    }
+  }
+`,t.f`
+  mutation UpdateJob(
+    $jobId: Int!
+    $changes: Job_set_input
+    $deletedAssetIds: [Int!]
+    $assets: [Asset_Entity_insert_input!]!
+    $questions: [Taxonomy_Entity_insert_input!]!
+    $hasQuestions: Boolean!
+    $media: [Media_Entity_insert_input!]!
+  ) {
+    update_Job_by_pk(pk_columns: { id: $jobId }, _set: $changes) {
+      id
+      status
+      number
+    }
+    insert_Media_Entity(objects: $media) {
+      returning {
+        id
+      }
+    }
+    insert_Asset_Entity(objects: $assets) {
+      returning {
+        id
+      }
+    }
+    delete_Asset_Entity(where: { id: { _in: $deletedAssetIds } }) {
+      returning {
+        id
+      }
+    }
+    delete_Taxonomy_Entity(where: { entityId: { _eq: $jobId }, entity: { _eq: "Job" } }) {
+      returning {
+        id
+      }
+    }
+    insert_Taxonomy_Entity(objects: $questions) @include(if: $hasQuestions) {
+      returning {
+        id
+      }
+    }
+  }
+`;let a=t.f`
+  mutation AddJob($objects: [JobTiming_insert_input!]!) {
+    insert_JobTiming(objects: $objects) {
+      returning {
+        id
+        status
+        notes
+        createdAt
+      }
+    }
+  }
+`,o=t.f`
+  mutation DeleteJobTiming($id: Int!, $quoteId: Int, $status: String) {
+    delete_JobTiming(
+      where: { jobId: { _eq: $id }, quoteId: { _eq: $quoteId }, status: { _eq: $status } }
+    ) {
+      returning {
+        jobId
+        status
+      }
+    }
+  }
+`,s=t.f`
+  query GetSLAsForJobManage($customerId: Int!, $locationId: Int!) {
+    customerSlas: SLA_Entity(
+      where: { entityId: { _eq: $customerId }, entity: { _eq: "Account" } }
+    ) {
+      sla: SLA {
+        name
+      }
+      id
+      inUse
+      onSite
+      onSiteUnit
+      quoteReturned
+      quoteReturnedUnit
+      jobReport
+      jobReportUnit
+      createdAt
+      updatedAt
+      notes
+      slaId
+    }
+    locationSlas: SLA_Entity(
+      where: { entityId: { _eq: $locationId }, entity: { _eq: "Location" } }
+    ) {
+      sla: SLA {
+        name
+      }
+      id
+      inUse
+      onSite
+      onSiteUnit
+      quoteReturned
+      quoteReturnedUnit
+      jobReport
+      jobReportUnit
+      createdAt
+      updatedAt
+      notes
+      slaId
+      entity
+    }
+    slas: SLA(where: { status: { _eq: "active" } }, order_by: { name: asc }) {
+      id
+      label: name
+      notes
+      onSite
+      onSiteUnit
+      quoteReturned
+      quoteReturnedUnit
+      jobReport
+      jobReportUnit
+      createdAt
+      updatedAt
+      type
+      subtype
+    }
+  }
+`,d=t.f`
+  query GetJobFinanceLogs($jobId: Int!) {
+    logs: JobFinanceLog(where: { jobId: { _eq: $jobId } }, order_by: { createdAt: desc }) {
+      id
+      type
+      value
+      difference
+      createdAt
+      meta
+    }
+    jobInfo: Job_by_pk(id: $jobId) {
+      id
+      type
+      statusData
+      pricing
+      supplierPricing
+      invoiceAmountCustomer
+      invoiceAmountSupplier
+      markupSupplierCost: meta(path: "markupSupplierCost")
+      invoices: Invoices(where: { entity: { _eq: "Job" } }) {
+        invoiceType
+      }
+      customerCustomVat: meta(path: "customerCustomVat")
+      jobSchedule: JobSchedule {
+        invoiceBasis
+      }
+      customer: Customer {
+        rateType: meta(path: "$.finance.rateType")
+        serviceRateType: meta(path: "$.finance.serviceRateType")
+        serviceRateLabour: meta(path: "$.finance.serviceRateLabour")
+        serviceRateExpenses: meta(path: "$.finance.serviceRateExpenses")
+        defaultVatRate
+      }
+      timings: JobTimings(order_by: { id: desc }) {
+        id
+        status
+        createdAt
+      }
+    }
+  }
+`,u=t.f`
+  mutation AddJobFinanceLog($objects: [JobFinanceLog_insert_input!]!) {
+    insert_JobFinanceLog(objects: $objects) {
+      returning {
+        id
+      }
+    }
+  }
+`,l=t.f`
+  mutation AddJob(
+    $timing: [JobTiming_insert_input!]!
+    $financeLog: [JobFinanceLog_insert_input!]!
+    $hasFinanceLog: Boolean!
+    $jobId: Int!
+    $jobChange: Job_set_input
+  ) {
+    insert_JobTiming(objects: $timing) {
+      returning {
+        id
+        status
+        notes
+        createdAt
+      }
+    }
+    insert_JobFinanceLog(objects: $financeLog) @include(if: $hasFinanceLog) {
+      returning {
+        id
+      }
+    }
+    update_Job_by_pk(pk_columns: { id: $jobId }, _set: $jobChange) @include(if: $hasFinanceLog) {
+      id
+      status
+    }
+  }
+`,c=t.f`
+  mutation calculateJobFinance(
+    $jobId: Int
+    $invoiceType: String
+    $customerId: Int
+    $scheduleId: Int
+    $locationId: Int
+    $skipErrors: Boolean
+  ) {
+    calculateJobFinance(
+      jobId: $jobId
+      invoiceType: $invoiceType
+      customerId: $customerId
+      scheduleId: $scheduleId
+      locationId: $locationId
+      skipErrors: $skipErrors
+    ) {
+      data
+    }
+  }
+`,m=t.f`
+  subscription GetJobTimings($adminId: Int!, $number: String!) {
+    timings: JobTiming(
+      where: { Job: { adminId: { _eq: $adminId }, number: { _eq: $number } } }
+      order_by: { id: desc }
+    ) {
+      id
+      status
+      notes
+      meta
+      quoteId
+      createdAt
+      user: User {
+        id
+        fullName
+      }
+    }
+  }
+`;e.s(["u",0,a,"B",0,u,"_",0,l,"T",0,c,"s",0,o,"D",0,i,"E",0,d,"W",0,s,"U",0,m,"x",0,r])},588964,e=>{var t=e.i(391398),n=e.i(691567),i=e.i(668921),r=e.i(152078),a=e.i(471973),o=e.i(606255),s=e.i(984636),d=e.i(530252),u=e.i(813843),l=e.i(115871),c=e.i(544005);let m={options:[],error:!1,helperText:"",stackProps:{},formControlProps:{},labelLeft:!1},p=e=>{let n=(0,c.f)(e,m),{label:p,options:y,error:h,helperText:b,stackProps:v={},formControlProps:I={},labelLeft:x}=n,g=e=>{let{children:n}=e;return(0,t.jsx)(t.Fragment,{children:n})};return(0,t.jsxs)(i.f,{sx:{m:3},error:h,variant:"standard",...I,children:[(0,t.jsxs)(u.f,{...x&&f,children:[p&&(0,t.jsx)(o.f,{id:"radio-group",color:"secondary",children:p}),(0,t.jsx)(s.f,{...n,"aria-labelledby":"radio-group",children:(0,t.jsx)(u.f,{...v,children:y.map(e=>{let{value:n,label:i,icon:a,ParentComponent:o=g}=e;return(0,t.jsx)(o,{children:(0,t.jsx)(r.f,{value:n,control:(0,t.jsx)(d.f,{color:"secondary"}),label:(0,t.jsxs)(u.f,{direction:"row",alignItems:"center",spacing:1,children:[a,(0,t.jsx)(l.f,{children:i})]})})})})})})]}),(0,t.jsx)(a.f,{children:b})]})};p.propTypes={label:n.default.string,options:n.default.arrayOf(n.default.shape({label:n.default.string.isRequired,value:n.default.any.isRequired,ParentComponent:n.default.elementType})),error:n.default.bool,helperText:n.default.string,stackProps:n.default.object,formControlProps:n.default.object,labelLeft:n.default.bool};let f={direction:"row",alignItems:"center",flexWrap:"wrap",spacing:1};e.s(["f",0,p])},510123,e=>{var t=e.i(391398),n=e.i(191788),i=e.i(362537),r=e.i(432171),a=e.i(773412),o=e.i(159080);let s=o.f`
+  fragment TaskFields on Task {
+    id
+    status
+    priority
+    title
+    content
+    dueDate
+    assignedUser: AssignedUser {
+      id
+      fullName
+    }
+  }
+`,d=o.f`
+  query GetTasks(
+    $jobId: Int
+    $customerId: Int
+    $supplierId: Int
+    $locationId: Int
+    $assignedUserId: Int
+    $limit: Int
+    $offset: Int
+    $orderBy: Task_order_by!
+  ) {
+    tasks: Task(
+      where: {
+        jobId: { _eq: $jobId }
+        customerId: { _eq: $customerId }
+        supplierId: { _eq: $supplierId }
+        locationId: { _eq: $locationId }
+        assignedUserId: { _eq: $assignedUserId }
+      }
+      limit: $limit
+      offset: $offset
+      order_by: [$orderBy]
+    ) {
+      ...TaskFields
+    }
+    meta: Task_aggregate(
+      where: {
+        jobId: { _eq: $jobId }
+        customerId: { _eq: $customerId }
+        supplierId: { _eq: $supplierId }
+        locationId: { _eq: $locationId }
+        assignedUserId: { _eq: $assignedUserId }
+      }
+    ) {
+      aggregate {
+        totalCount: count
+      }
+    }
+  }
+
+  ${s}
+`,u=o.f`
+  subscription GetTasks(
+    $jobId: Int
+    $customerId: Int
+    $supplierId: Int
+    $locationId: Int
+    $assignedUserId: Int
+    $limit: Int
+    $offset: Int
+    $orderBy: Task_order_by!
+  ) {
+    tasks: Task(
+      where: {
+        jobId: { _eq: $jobId }
+        customerId: { _eq: $customerId }
+        supplierId: { _eq: $supplierId }
+        locationId: { _eq: $locationId }
+        assignedUserId: { _eq: $assignedUserId }
+      }
+      limit: $limit
+      offset: $offset
+      order_by: [$orderBy]
+    ) {
+      ...TaskFields
+    }
+  }
+  ${s}
+`;var l=e.i(594301),c=e.i(98762),m=e.i(871931),p=e.i(760981),f=e.i(302966),y=e.i(738251),h=e.i(755548),b=e.i(799083),v=e.i(76381),I=e.i(152078),x=e.i(813843),g=e.i(115871),j=e.i(747112),A=e.i(220490),_=e.i(101934),C=e.i(106850),R=e.i(280445),S=e.i(529292),T=e.i(885783),E=e.i(337089);let $=e=>{let{title:n="",dueDate:i,priority:r,status:a,content:o,assigned:s,onView:d=()=>{}}=e;return(0,t.jsxs)(w,{variant:"outlined",children:[(0,t.jsxs)(C.f,{sx:{padding:1},children:[(0,t.jsxs)(x.f,{direction:"row",justifyContent:"space-between",children:[(0,t.jsx)(T.f,{priority:r}),(0,t.jsx)(E.f,{status:a})]}),(0,t.jsxs)(g.f,{mt:1,variant:"h6",sx:{whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis"},children:[n,"  "]}),(0,t.jsx)(g.f,{mt:1,sx:{height:"63px",overflow:"hidden"},children:o}),s&&(0,t.jsxs)(g.f,{variant:"subtitle2",children:["Assigned by ",s]})]}),(0,t.jsxs)(_.f,{sx:{display:"flex",justifyContent:"space-between",pt:0},children:[(0,t.jsx)(h.f,{variant:"contained",color:"secondary",onClick:d,sx:{height:"30px"},children:"View"}),(0,t.jsx)(N,{variant:"subtitle2",children:i})]})]})},w=(0,R.f)(A.f)(e=>{let{theme:t}=e;return{display:"flex",flexDirection:"column",justifyContent:"space-between",maxHeight:"210px",minWidth:"280px",backgroundColor:t.palette.muiCardGray.main}}),N=(0,R.f)(g.f)(e=>{let{theme:t}=e;return{alignSelf:"flex-end",fontWeight:700,color:(0,S.V)(t.palette.black.main,.46)}});var P=e.i(811179),q=e.i(411331),k=e.i(265387),D=e.i(398038);let U={item:"dueDate",order:"desc"};e.s(["f",0,e=>{let{jobId:o,customerId:s,supplierId:A,locationId:_,subscription:C,accordionSx:R,expanded:S,showMyTaskButton:T=!1,onChangeExpanded:E=()=>{}}=e,w=(0,q.f)(),{user:N}=(0,l.f)(),{initialData:M}=(0,c.f)({filters:{jobId:o,customerId:s,supplierId:A,locationId:_},initialSort:U}),[O,L]=(0,n.useState)(!1),F={...M,assignedUserId:O?N.id:M.userId},{loading:V,data:{tasks:J}={tasks:[],meta:{aggregate:{totalCount:0}}}}=(0,r.t)(d,{variables:{...F},skip:C}),{loading:H,data:{tasks:Y}={tasks:[]}}=(0,a.f)(u,{variables:{...F},skip:!C}),G=(0,n.useCallback)(e=>{let{id:n}=e;w.show({content:(0,t.jsx)(P.DetailsTaskForm,{id:n}),title:"Task Details",submitForm:"taskDetailsForm",xs3:"100vw",sm:"100vw",sm2:"100vw",sm3:"100vw",md2:"100vw",lg:"90vw",lg2:"80vw",query:{task_id:n.toString()},keepPrevQueryOnOpen:!0})},[w]),{open:z}=(0,D.f)(G,"task_id"),W=(C?Y:J).map(e=>({id:e.id,status:e.status,priority:e.priority,title:e.title,content:e.content,dueDate:(0,i.default)(e.dueDate).format("YYYY-MM-DD"),assignedUser:e.assignedUser?.fullName,item:e,actions:""}));return(0,t.jsx)(y.f,{children:(0,t.jsxs)(m.f,{expanded:S,onChange:E,sx:R,defaultExpanded:!0,children:[(0,t.jsx)(f.f,{expandIcon:(0,t.jsx)(j.f,{}),children:(0,t.jsx)(g.f,{variant:"h6",children:"Tasks"})}),(0,t.jsx)(p.f,{sx:{paddingTop:0},children:(0,t.jsxs)(x.f,{width:"100%",spacing:1,children:[(0,t.jsxs)(x.f,{width:"100%",direction:"row",justifyContent:"space-between",alignItems:"center",children:[(0,t.jsx)(g.f,{children:"Current task in progress"}),T&&(0,t.jsx)(I.f,{control:(0,t.jsx)(b.f,{color:"secondary",checked:O,onChange:e=>{e.stopPropagation(),L(e=>!e)}}),label:"My Tasks"})]}),(0,t.jsx)(x.f,{width:"100%",direction:"row",spacing:2,pb:1,sx:{overflowX:"scroll"},children:V||H?(0,t.jsx)(x.f,{width:"100%",direction:"row",justifyContent:"center",children:(0,t.jsx)(v.f,{color:"secondary"})}):W.map(e=>(0,t.jsx)($,{dueDate:e.dueDate,priority:e.priority,status:e.status,title:e.title,content:e.content,assigned:e.assignedUser,onView:t=>z({id:e.id})}))}),(0,t.jsx)(x.f,{direction:"row",justifyContent:"center",children:(0,t.jsx)(h.f,{variant:"contained",color:"secondary",onClick:e=>{e.preventDefault(),e.stopPropagation(),w.show({content:(0,t.jsx)(k.f,{jobId:o,customerId:s,supplierId:A,locationId:_,close:e=>{w.close(),z({id:e})}}),title:"Create Task",xs3:"100vw",sm:"100vw",sm2:"80vw",sm3:"70vw",md2:"60vw",lg:"50vw",lg2:"40vw",keepPrevQueryOnOpen:!0})},children:"Add new task"})})]})})]})})}],510123)},265387,398038,e=>{var t=e.i(391398),n=e.i(362537),i=e.i(98926),r=e.i(776204),a=e.i(511667),o=e.i(974261),s=e.i(422411),d=e.i(424894),u=e.i(428424),l=e.i(76381),c=e.i(813843),m=e.i(652148),p=e.i(588964),f=e.i(722394),y=e.i(962379),h=e.i(230512),b=e.i(594301),v=e.i(394989),I=e.i(941062);e.i(864980);var x=e.i(790388),g=e.i(856688),j=e.i(191788),A=e.i(54100),_=e.i(21557),C=e.i(896657),R=e.i(738251),S=e.i(341056),T=e.i(498681),E=e.i(620291),$=e.i(867586),w=e.i(593626),N=e.i(885549),P=e.i(116823),q=e.i(877602),k=e.i(271775),D=e.i(144634),U=e.i(441625);async function M(e,t,n,i){if(n.value&&n.formFields){var r;await e.mutate({mutation:U.O,variables:{formId:Number(n.value),userId:n.userId||i,submissionData:(e=>{if(e)return{...e}})(n.submissionData),formFields:(r=n.formFields)?Array.isArray(r)?r:[r]:[],entity:"Task",entityId:t}})}}e.i(604265);let O=j.default.memo(A.f);e.s(["f",0,e=>{let{jobId:A,customerId:U,supplierId:L,locationId:F,close:V}=e,{user:J}=(0,b.f)(),H=(0,i.f)(),Y=(0,T.f)(),G=Y?.admin?.modules?.formBuilder||!1,z=(0,_.f)(),{createMediaInput:W,loadingAddMedia:B}=(0,g.f)("Task",J.adminId,J.id),{handleSubmit:Q,watch:X,setValue:K,control:Z,errors:ee,register:et,formState:en,setError:ei,clearErrors:er}=(0,s.G)({defaultValues:{priority:"urgent",relatedLinks:[],customerAccount:null,assignedCustomer:null},resolver:(0,d.yupResolver)(I.f)}),ea=X("customerAccount"),eo=X("relatedLinks"),es=X("attachments"),ed=X("formSubmission"),eu=X("dueDate"),[el,ec]=(0,j.useState)(!1),[em,ep]=(0,j.useState)(!1),[ef,ey]=(0,j.useState)(""),[eh,eb]=(0,j.useState)(""),ev=(0,j.useRef)(ef);(0,j.useEffect)(()=>{ev.current=ef},[ef]);let eI=(0,k.f)(ef),ex=eu&&el?eI?(0,n.default)(eu).format("YYYY-MM-DD-HH-mm"):(0,n.default)(eu).format("YYYY-MM-DD"):null;(0,j.useEffect)(()=>{U&&K("customerAccount",{value:U,label:""},{shouldDirty:!1})},[U,K]),(0,j.useEffect)(()=>{if(!el||!eu)return;let e=(0,D.v)(eu,ev.current,{syncStartToDueDate:!0});e.rruleString&&(ey(e.rruleString),eb(e.rruleText))},[ex,el,eI,eu]);let[eg,{isLoading:ej}]=(0,a.f)("/task",{queryKey:"create-task-rest",method:"POST",baseUrl:o.M,onError:e=>{z.show({content:e.message||q.G,severity:"error"})}}),[eA,{loading:e_}]=(0,r.f)(h.A,{refetchQueries:["GetTasksTable"],onCompleted:()=>{z.show({content:"Task created successfully",severity:"success"})},onError:()=>{z.show({content:"Failed to create task",severity:"error"})}}),eC=(0,j.useCallback)(e=>{K("content",e.textContent),K("editorState",e.json)},[K]),eR=(0,j.useCallback)((e,t)=>{ey(e),eb(t)},[]),eS=async e=>{let t;if(el){if(!e.dueDate)return void z.show({content:"Set a due date before enabling recurrence.",severity:"error"});if(em)return void z.show({content:"Check the recurrence end date.",severity:"error"});if(!ef)return void z.show({content:q.G,severity:"error"})}let n=await W(e.attachments),i=(0,C.U)(e.relatedLinks),r=(0,C.n)(e.relatedLinks),a=(0,C.V)(e.relatedLinks),o=(0,N.D)(e,U||i),s={status:u.k.NEW,priority:e.priority,relatedLinks:e.relatedLinks,title:e.title,content:e.content,editorState:e.editorState,dueDate:e.dueDate,adminId:J.adminId,userId:J.id,assignedAccountId:(0,N.E)(e,J.adminId),assignedUserId:(0,N.w)(e),jobId:A,customerId:o,supplierId:L||r,locationId:F||a,...n||{}},d=ed?.value&&ed?.formFields?{formId:Number(ed.value),userId:ed.userId||J.id,formFields:Array.isArray(ed.formFields)?ed.formFields:[ed.formFields],submissionData:ed.submissionData??null}:void 0,l=!1;if(el&&ef){l=!0;let e=await eg({body:{...s,recurrence_rule:ef,recurrence_description:eh,...d?{form:d}:{}}});if(!(t=e?.id))return;await H.refetchQueries({include:["GetTasksTable","GetCustomerTasksTable"]}),z.show({content:"Task created successfully",severity:"success"})}else{let{data:e}=await eA({variables:{objects:[s]}});if(!e||!e.insert_Task?.returning?.[0]?.id)return;t=e.insert_Task.returning[0].id}if(t){if(!l&&ed?.value&&ed?.formFields)try{await M(H,t,ed,J.id)}catch{z.show({content:"Task created but the form could not be linked.",severity:"warning"})}V?.(t)}};return e_||ej||B?(0,t.jsx)(c.f,{width:"100%",direction:"column",justifyContent:"center",alignItems:"center",children:(0,t.jsx)(l.f,{color:"secondary"})}):(0,t.jsx)("form",{id:"offCanvasForm",onSubmit:Q(eS),children:(0,t.jsxs)(c.f,{direction:"column",spacing:3,children:[(0,t.jsx)(s.e,{control:Z,name:"title",render:e=>{let{value:n,onChange:i}=e;return(0,t.jsx)(m.f,{variant:"standard",color:"secondary",label:"Title",value:n,onChange:i,error:!!ee.title,helperText:ee.title?.message})}}),(0,t.jsx)(O,{handleChange:eC}),(0,t.jsx)(s.e,{control:Z,name:"priority",render:e=>{let{value:n,onChange:i}=e;return(0,t.jsx)(p.f,{label:"Priority:",labelLeft:!0,stackProps:{direction:"row",flexWrap:"wrap"},options:u.s,value:n,onChange:i,error:ee.priority,helperText:ee.priority?.message})}}),(0,t.jsx)(s.e,{control:Z,name:"dueDate",defaultValue:null,render:e=>{let{value:i,onChange:r}=e;return eI?(0,t.jsx)(y.f,{label:"Due date",format:"Do MMM YYYY HH:mm",ampm:!1,minutesStep:15,minDateTime:(0,n.default)(),value:i?(0,n.default)(i):null,onChange:e=>{r(e&&(0,n.default)(e).isValid()?(0,n.default)(e).toDate():null)},slotProps:{textField:{fullWidth:!0,variant:"standard",color:"secondary",error:!!ee.dueDate,helperText:ee.dueDate?.message}}}):(0,t.jsx)(f.f,{label:"Due date",format:"Do MMM YYYY",minDate:(0,n.default)().startOf("day"),value:i?(0,n.default)(i):null,onChange:e=>{let t=(0,D.p)(e);r(t?t.toDate():null)},slotProps:{textField:{fullWidth:!0,variant:"standard",color:"secondary",error:!!ee.dueDate,helperText:ee.dueDate?.message}}})}}),(0,t.jsx)(s.e,{name:"assignedUser",control:Z,defaultValue:null,render:e=>{let{value:n,onChange:i}=e;return(0,t.jsx)(E.f,{value:n,onChange:i,error:!!ee.assignedUser,helperText:ee.assignedUser?.value?.message})}}),(0,t.jsx)(s.e,{name:"customerAccount",control:Z,defaultValue:null,render:e=>{let{value:n,onChange:i}=e;return(0,t.jsx)($.f,{value:n,onChange:e=>{i(e),K("assignedCustomer",null)},error:!!ee.customerAccount,helperText:ee.customerAccount?.message})}}),(0,t.jsx)(s.e,{name:"assignedCustomer",control:Z,defaultValue:null,render:e=>{let{value:n,onChange:i}=e;return(0,t.jsx)(w.f,{customerAccountId:ea?.value??null,value:n,onChange:i,error:!!ee.assignedCustomer,helperText:ee.assignedCustomer?.message})}}),(0,t.jsx)(v.f,{values:eo,setValue:K,name:"relatedLinks"}),(0,t.jsx)(P.f,{dueDate:eu?(0,n.default)(eu):null,frequency:ef,onRecurrenceEnabledChange:ec,onFrequencyChange:eR,onFrequencyErrorChange:ep,setValue:K}),(0,t.jsx)(x.f,{values:es,setValue:K}),(0,t.jsx)(s.e,{name:"content",control:Z,render:e=>{let{value:n,onChange:i}=e;return(0,t.jsx)("input",{value:n,onChange:i,type:"hidden"})}}),(0,t.jsx)(s.e,{name:"editorState",control:Z,render:e=>{let{value:n,onChange:i}=e;return(0,t.jsx)("input",{value:n,onChange:i,type:"hidden"})}}),(0,t.jsx)(s.e,{name:"relatedLinks",control:Z,render:e=>{let{value:n,onChange:i}=e;return(0,t.jsx)("input",{value:n,onChange:i,type:"hidden"})}}),(0,t.jsx)(s.e,{name:"attachments",control:Z,render:e=>{let{value:n,onChange:i}=e;return(0,t.jsx)("input",{value:n,onChange:i,type:"hidden"})}}),G&&(0,t.jsx)(R.f,{children:(0,t.jsx)(S.f,{control:Z,errors:ee,register:et,setValue:K,formState:en,setError:ei,clearErrors:er,hasPreview:!0,entity:"Task",entityId:null})})]})})}],265387);var L=e.i(203828);e.s(["f",0,function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"id",{query:n}=(0,L.useRouter)(),i=(0,j.useRef)(!1);return(0,j.useEffect)(()=>{let r=n[t],a=Number(r);i.current||!r||isNaN(a)||e({id:a}),i.current=!0},[e,n,t]),{open:(0,j.useCallback)(t=>{let{id:n}=t;e({id:n})},[e])}}],398038)},520561,e=>{var t=e.i(209906);let n=async(e,n,i)=>{let r=null,a=null,o=null,s=null,d=[];return i&&"supplier"!==i||d.push(e.mutate({mutation:t.T,variables:{jobId:n,invoiceType:"supplier"}}).then(e=>{r=e?.data?.calculateJobFinance?.data?.persistentData||null}).catch(e=>{o=e})),i&&"supplier"===i||d.push(e.mutate({mutation:t.T,variables:{jobId:n,invoiceType:"customerVat"}}).then(e=>{a=e?.data?.calculateJobFinance?.data?.persistentData||null}).catch(e=>{s=e})),await Promise.all(d),{financeSupplier:r,financeCustomer:a,supplierError:o,customerError:s}},i=async e=>{let{client:n,customerId:i,scheduleId:r,locationId:a,skipErrors:o=!1}=e;return n.mutate({mutation:t.T,variables:{customerId:i,scheduleId:r,locationId:a,skipErrors:o}})};e.s(["L",0,i,"f",0,n])},252647,766413,e=>{var t=e.i(518566);t.f.CustomerVat,t.f.Supplier;let n=[t.f.ProformaInvoiceCustomer,t.f.ProformaInvoiceSupplier],i=[t.f.CustomerPpmInvoice,t.f.SupplierPpmInvoice],r={customer:[t.f.CustomerVat,t.f.ProformaInvoiceCustomer,t.f.CustomerPpmInvoice,t.f.CustomerGroupInvoice],supplier:[t.f.Supplier,t.f.ProformaInvoiceSupplier,t.f.SupplierPpmInvoice]},a={[t.f.CustomerVat]:"Customer VAT Invoice",[t.f.Supplier]:"Supplier Invoice",[t.f.ProformaInvoiceCustomer]:"Customer ad-hoc Invoice",[t.f.ProformaInvoiceSupplier]:"Supplier ad-hoc Invoice",[t.f.CustomerPpmInvoice]:"PPM Customer Invoice",[t.f.SupplierPpmInvoice]:"PPM Supplier Invoice",[t.f.CustomerGroupInvoice]:"Customer group invoice"};e.s(["B",0,r,"z",0,a,"_",0,i,"D",0,n],252647);var o=e.i(362537);e.s(["p",0,e=>e?(0,o.default)(e).format("YYYY-MM-DD"):"-","l",0,e=>e.invoicedDate??e.dateReceived??null],766413)},694923,e=>{e.s(["f",0,[{text:"Reactive",value:"reactive",context:"#2EE6CA"},{text:"Planned Maintenance",value:"ppm",context:"#D67EFF"},{text:"Quote",value:"quote",context:"#7D7"},{text:"Compliance",value:"cppm",context:"#CC7429"}]])},302876,e=>{var t=e.i(391398),n=e.i(98926),i=e.i(776204),r=e.i(432171),a=e.i(975569),o=e.i(594301),s=e.i(871931),d=e.i(760981),u=e.i(302966),l=e.i(115871),c=e.i(813843),m=e.i(553875),p=e.i(76381),f=e.i(659587),y=e.i(191788),h=e.i(362537),b=e.i(936641),v=e.i(755548),I=e.i(498681),x=e.i(21557),g=e.i(252647),j=e.i(529422),A=e.i(624841),_=e.i(74633),C=e.i(277984),R=e.i(834862),S=e.i(766413),T=e.i(948574),E=e.i(879436);e.s(["f",0,e=>{let $,{accountEntryId:w,close:N}=e,{authStatus:P,receiveUpdatesFromXero:q}=(0,R.f)(),k=(0,x.f)(),D=(0,I.f)(),U=(0,n.f)(),M=D.admin?.jobSetting?.jobNumberPrefix,O=D.admin?.jobSetting?.jobNumberSuffix,[L,F]=(0,y.useState)(!1),{hasRole:V}=(0,o.f)(),J=V("admin"),H=V([...T.d]),[Y,{loading:G}]=(0,i.f)(a.p,{refetchQueries:["GetAccountEntries"],onCompleted:()=>{k.show({content:"Account Entry was successfully deleted",severity:"success"}),N&&N()},onError:e=>{k.show({content:`Error: ${e.message}`,severity:"error"})}}),{data:{accountEntry:z}={accountEntry:{}},loading:W}=(0,r.t)(a.H,{variables:{accountEntryId:w}}),{data:{reconciliations:B}={reconciliations:[]},loading:Q}=(0,r.t)(a.D,{variables:{accountEntryId:z.id,skip:!z.id||!["paymentReceipt","creditNote"].includes(z.type)}}),{data:{invoices:X}={invoices:[]},loading:K}=(0,r.t)(a.k,{variables:{accountEntryId:z.id,skip:!z.id||![...g._,C.f.CUSTOMER_GROUP_INVOICE].includes(z.type)}}),Z=[{flex:1,sortable:!1,headerName:"Number",field:"jobNumber",renderCell:e=>{let{row:n}=e;return n.invoiceType===C.f.CUSTOMER_GROUP_INVOICE?`Multiple / ${n.invoiceNumber}`:g._.includes(n.invoiceType)?`PM ${n.invoiceNumber}`:(0,t.jsx)(j.f,{id:n.jobId,number:n.jobNumber,invoiceNumber:n.invoiceNumber,numberPrefix:M,numberSuffix:O,openCanvas:!0,type:n.jobType})}},{flex:1,sortable:!1,headerName:"Date",field:"date"},{flex:1,sortable:!1,headerName:"Reconciled Amount",field:"reconciledAmount"}],ee=(0,y.useMemo)(()=>B.map(e=>{let t=e.accountEntryInvoice?.invoices?.[0];return[...g._,C.f.CUSTOMER_GROUP_INVOICE].includes(e.type)?{id:e.id,jobNumber:null,invoiceNumber:e.accountEntryInvoice.invoiceNumber,invoiceType:e.accountEntryInvoice.type,date:(0,h.default)(e.createdAt).format("YYYY-MM-DD"),reconciledAmount:(0,E.f)(e.amount),jobType:"ppm",jobId:null}:{id:e.id,jobNumber:t?.job?.number,invoiceNumber:t?.invoiceNumber,invoiceType:t?.invoiceType,date:(0,h.default)(e.createdAt).format("YYYY-MM-DD"),reconciledAmount:(0,E.f)(e.amount),jobType:t?.job?.type,jobId:t?.job?.id}}),[B]),et=[{flex:1,sortable:!1,headerName:"Number",field:"number",renderCell:e=>{let{row:n}=e;return(0,t.jsx)(j.f,{id:n.id,number:n.number,invoiceNumber:n.invoiceNumber,numberPrefix:M,numberSuffix:O,openCanvas:!0,type:n.jobType,toggleShow:()=>{N&&N()}})}},{flex:1,sortable:!1,headerName:"Status",field:"status",renderCell:e=>{let{row:n}=e;return n.status?(0,t.jsx)(A.f,{value:n.status}):""}}],en=(0,y.useMemo)(()=>X.map(e=>({id:e?.Job?.id,number:e?.Job?.number,status:e?.Job?.status,invoiceNumber:e?.invoiceNumber,jobType:e?.Job?.type})),[X]),ei=[C.f.INVOICE,C.f.PROFORMA_INVOICE,C.f.CUSTOMER_PPM_INVOICE,C.f.SUPPLIER_PPM_INVOICE,C.f.CUSTOMER_GROUP_INVOICE].includes(z.type),er=z.xeroSyncError?.message?.split(";")??[];return(0,t.jsxs)(c.f,{spacing:2,children:[(0,t.jsx)(m.f,{sx:{zIndex:1e5},open:W||G||L,children:(0,t.jsx)(p.f,{color:"secondary"})}),(0,t.jsxs)(s.f,{defaultExpanded:!0,children:[(0,t.jsx)(u.f,{expandIcon:(0,t.jsx)(f.default,{}),children:"Account Entry Details"}),(0,t.jsx)(d.f,{children:(0,t.jsxs)(c.f,{spacing:1,children:[H&&(0,t.jsxs)(c.f,{children:[(0,t.jsx)(l.f,{variant:"subtitle2",children:"Date"}),(0,t.jsx)(l.f,{children:(0,h.default)(z.createdAt).format("YYYY-MM-DD")})]}),(0,t.jsxs)(c.f,{children:[(0,t.jsx)(l.f,{variant:"subtitle2",children:"Issue date"}),(0,t.jsx)(l.f,{children:(0,S.p)((0,S.l)(z))})]}),(0,t.jsxs)(c.f,{children:[(0,t.jsx)(l.f,{variant:"subtitle2",children:"Type"}),(0,t.jsx)(l.f,{children:z.type})]}),(0,t.jsxs)(c.f,{children:[(0,t.jsx)(l.f,{variant:"subtitle2",children:"Reference"}),(0,t.jsx)(l.f,{children:z.reference||"-"})]}),(0,t.jsxs)(c.f,{children:[(0,t.jsx)(l.f,{variant:"subtitle2",children:"Comment"}),(0,t.jsx)(l.f,{children:z.comment||"-"})]}),(0,t.jsxs)(c.f,{children:[(0,t.jsx)(l.f,{variant:"subtitle2",children:"Debit"}),(0,t.jsx)(l.f,{children:(0,E.f)(z.debit)})]}),(0,t.jsxs)(c.f,{children:[(0,t.jsx)(l.f,{variant:"subtitle2",children:"Credit"}),(0,t.jsx)(l.f,{children:(0,E.f)(z.credit)})]})]})})]}),"authorized"===P&&ei&&er.length>0&&(0,t.jsx)(t.Fragment,{children:(0,t.jsxs)(b.f,{variant:"filled",severity:"error",sx:{marginTop:"16px"},children:["Xero Error:",1===er.length?er[0]:(0,t.jsx)(c.f,{children:er.map(e=>(0,t.jsx)(l.f,{children:e.trim()}))})]})}),"authorized"===P&&ei&&z.xeroInvoiceId&&(0,t.jsxs)(c.f,{width:"100%",children:[(0,t.jsx)(v.f,{fullWidth:!0,variant:"contained",color:"danger",sx:{marginTop:"16px"},onClick:($=z.id,async e=>{try{F(!0),e.stopPropagation(),await q($),U.refetchQueries({include:["GetAccountEntryDetails","GetAccountEntries"]})}finally{F(!1)}}),children:"Manual Xero webhook sync"}),(0,t.jsx)(b.f,{variant:"filled",severity:"info",sx:{marginTop:"16px"},children:"This will manually trigger a sync with Xero to update the account entry data. Use this if the entry is not reflecting the latest changes from Xero."})]}),["paymentReceipt","creditNote"].includes(z.type)&&(0,t.jsxs)(t.Fragment,{children:[(0,t.jsxs)(s.f,{defaultExpanded:!0,children:[(0,t.jsx)(u.f,{expandIcon:(0,t.jsx)(f.default,{}),children:"Related Invoices"}),(0,t.jsx)(d.f,{children:(0,t.jsx)(_.s,{loading:Q,columns:Z,rows:ee})})]}),J&&"paymentReceipt"===z.type&&(0,t.jsx)(v.f,{fullWidth:!0,variant:"contained",color:"danger",sx:{marginTop:"16px"},onClick:e=>{e.stopPropagation(),Y({variables:{id:z.id}})},children:"Delete"}),J&&"paymentReceipt"===z.type&&B.length>0&&(0,t.jsx)(b.f,{variant:"filled",severity:"info",sx:{marginTop:"16px"},children:"Deleting this receipt will potentially remove other reconciled entries."})]}),[...g._,C.f.CUSTOMER_GROUP_INVOICE].includes(z.type)&&(0,t.jsxs)(s.f,{defaultExpanded:!0,children:[(0,t.jsx)(u.f,{expandIcon:(0,t.jsx)(f.default,{}),children:"Related Jobs"}),(0,t.jsx)(d.f,{children:(0,t.jsx)(_.s,{loading:K,columns:et,rows:en})})]})]})}])},975569,e=>{var t=e.i(159080);let n=t.f`
+  mutation DeleteAccountEntry($id: Int!) {
+    deleteAccountEntry(id: $id) {
+      success
+      data
+    }
+  }
+`,i=t.f`
+  query GetRelatedAccountEntries($accountEntryId: Int!) {
+    reconciliations: Reconciliation(
+      where: {
+        creditEntityId: { _eq: $accountEntryId }
+        creditEntity: { _in: ["PaymentReceipt", "CreditNote"] }
+      }
+    ) {
+      id
+      amount
+      createdAt
+      accountEntryInvoice: InvoiceEntry {
+        id
+        type
+        invoiceNumber
+        invoices: Invoices {
+          id
+          invoiceType
+          invoiceNumber
+          job: Job {
+            id
+            number
+            type
+            status
+            timings: JobTimings(order_by: { createdAt: desc }) {
+              id
+              status
+              createdAt
+            }
+          }
+        }
+      }
+    }
+  }
+`,r=t.f`
+  query GetRelatedInvoces($accountEntryId: Int!) {
+    invoices: Invoice(where: { accountEntryId: { _eq: $accountEntryId } }) {
+      id
+      invoiceNumber
+      Job {
+        id
+        number
+        type
+        status
+      }
+    }
+  }
+`,a=t.f`
+  query GetAccountEntryDetails($accountEntryId: Int!) {
+    accountEntry: AccountEntry_by_pk(id: $accountEntryId) {
+      id
+      type
+      debit
+      credit
+      reference: meta(path: "reference")
+      comment: meta(path: "comment")
+      xeroInvoiceId: meta(path: "xeroInvoiceId")
+      syncedWithXero: meta(path: "syncedWithXero")
+      xeroSyncError: meta(path: "xeroSyncError")
+      createdAt
+      dateReceived
+      invoicedDate
+    }
+  }
+`;e.s(["p",0,n,"H",0,a,"D",0,i,"k",0,r])},785744,581384,e=>{e.s(["f",0,20],581384);let t=e=>{if(null==e||"string"==typeof e&&""===e.trim())return null;let t="string"==typeof e?Number(e):e;return"number"!=typeof t||!Number.isFinite(t)||t<0||t>100?null:t};e.s(["u",0,e=>{if(e.jobCustomVat?.enabled){let n=t(e.jobCustomVat.rate);if(null!==n)return n}let n=t(e.customerDefaultVatRate);return null!==n?n:20},"H",0,t],785744)},995070,e=>{e.s(["i",0,"VAT rate must be between 0 and 100, to a maximum of 2 decimal places.","r",0,"Enter a VAT rate.","b",0,e=>{if(null==e||Number.isNaN(e))return!0;let t=100*e;return Math.abs(t-Math.round(t))<=1e-9*Math.max(1,Math.abs(t))},"H",0,e=>{let{value:t,validity:n}=e.target;return n.badInput?0/0:""===t?null:Number(t)}])},54348,e=>{var t=e.i(391398),n=e.i(191788),i=e.i(98926),r=e.i(432171),a=e.i(159080);let o=a.f`
+  query GetPaymentReceivedEntries(
+    $where: AccountEntry_bool_exp
+    $limit: Int
+    $offset: Int
+    $accountId: Int
+    $locationId: Int
+    $orderBy: [AccountEntry_order_by!]
+  ) {
+    accountEntries: getDashboard_AccountEntry_calculatebalance(
+      limit: $limit
+      offset: $offset
+      order_by: $orderBy
+      where: $where
+      args: { location_id: $locationId }
+    ) {
+      id
+      type
+      locationId
+      invoiceNumber
+      createdAt
+      outstandingdays
+      outstandingAmount
+      outstandingAmountNet
+      meta
+      accountId
+      invoices: Invoices {
+        id
+        Job {
+          id
+          number
+          type
+        }
+      }
+    }
+    meta: getDashboard_AccountEntry_calculatebalance_aggregate(
+      where: $where
+      args: { location_id: $locationId }
+    ) {
+      aggregate {
+        totalCount: count
+      }
+    }
+  }
+`;var s=e.i(76381),d=e.i(498681),u=e.i(21557),l=e.i(813843),c=e.i(740790),m=e.i(652148),p=e.i(722394),f=e.i(553875),y=e.i(506656),h=e.i(426778);let b=h.t().shape({dateReceived:h.c().required("Date Received is required").typeError("Date Received is required"),amount:h.H().positive("Amount Received must be positive").required("Amount Received is required").typeError("Amount Received is required").test("sum-of-payments","The sum of the reconciled amounts does not match the amount received",function(e){let t=(this.parent.payments||[]).filter(e=>null!=e.amount&&!Number.isNaN(e.amount)&&+e.amount>0).reduce((e,t)=>(0,y.f)(e+ +t.amount,2),0);return null==e||e===t}).test("sum-of-outstanding-amounts","The sum of the outstanding amounts does not match the amount received",function(e){return e<=(this.parent.payments||[]).filter(e=>null!=e.amount&&!Number.isNaN(e.amount)&&+e.amount>0).reduce((e,t)=>(0,y.f)(e+t.outstandingAmount,2),0)}),paymentReference:h.x().required("Payment Reference is required").typeError("Payment Reference is required"),comment:h.x().nullable(),payments:h.k().of(h.t().shape({outstandingAmount:h.H().required("Outstanding Amount is required").typeError("Outstanding Amount is required"),accountEntryId:h.H().required("Account Entry ID is required").typeError("Account Entry ID is required"),amount:h.D().nullable().test("sum-of-outstanding-amounts","The sum of the outstanding amounts does not match the amount received",function(e){let t=this.parent.outstandingAmount;return null==e||""===e||Number(e)<=t})})).required("Payments are required")});var v=e.i(964770),I=e.i(140021),x=e.i(422411),g=e.i(424894),j=e.i(443103),A=e.i(122965),_=e.i(74633),C=e.i(262999),R=e.i(16135),S=e.i(345837),T=e.i(529069),E=e.i(65295),$=e.i(511667),w=e.i(362537),N=e.i(773831),P=e.i(591394),q=e.i(529422),k=e.i(879436);e.s(["f",0,e=>{let{accountId:a,locationId:h,jobId:D,refetchGraphQLQueries:U,refetchFetchQueries:M,refetch:O,close:L}=e,F=(0,i.f)(),V=(0,u.f)(),J=(0,d.f)(),H=J.admin?.jobSetting?.jobNumberPrefix,Y=J.admin?.jobSetting?.jobNumberSuffix,[G,z]=(0,n.useState)([]),{errors:W,control:B,watch:Q,setValue:X,handleSubmit:K,trigger:Z,getValues:ee}=(0,x.G)({resolver:(0,g.yupResolver)(b),shouldUnregister:!1,mode:"onChange",reValidateMode:"onChange"});(0,x.v)({control:B,name:"payments"});let et=Q("amount"),en=Q("payments"),{activeAccountId:ei,isMultiAccount:er}=(e=>{let{accountId:t,rowItems:n,payments:i}=e,r=Array.isArray(t)&&t.length>1;return{activeAccountId:(()=>{if(Array.isArray(t)&&1===t.length)return t[0]??null;if(!Array.isArray(t))return t;let e=i.findIndex(e=>null!=e.amount&&!Number.isNaN(Number(e.amount))&&Number(e.amount)>0);return -1===e?null:n[e]?.accountId??null})(),isMultiAccount:r}})({accountId:a,rowItems:G,payments:en}),{autoReconcile:ea,setAutoReconcile:eo,handleAmountReceivedChange:es,handleAutoReconcileChange:ed}=(e=>{let{setValue:t,trigger:i,getValues:r,rowItems:a,isMultiAccount:o,activeAccountId:s}=e,[d,u]=(0,n.useState)(!1),l=(0,n.useCallback)(e=>{let n=r("payments")??[];if(!e)return void n.forEach((e,n)=>{t(`payments.${n}.amount`,"")});let d=e,u=s??a[0]?.accountId??null;n.forEach((e,n)=>{o&&null!==u&&a[n]?.accountId!==u?t(`payments.${n}.amount`,""):(d>e.outstandingAmount?t(`payments.${n}.amount`,e.outstandingAmount):d>0?t(`payments.${n}.amount`,d):t(`payments.${n}.amount`,""),d=(0,y.f)(d-e.outstandingAmount,2))}),i("amount"),i("payments")},[r,t,i,o,s,a]),c=(0,n.useCallback)(e=>{d&&l(Number.isNaN(Number(e.target.value))?null:Number(e.target.value))},[d,l]);return{autoReconcile:d,setAutoReconcile:u,handleAmountReceivedChange:c,handleAutoReconcileChange:(0,n.useCallback)(e=>{if(!e)return;let t=r("amount");l(Number.isNaN(Number(t))?null:Number(t))},[r,l])}})({setValue:X,trigger:Z,getValues:ee,rowItems:G,isMultiAccount:er,activeAccountId:ei}),{reference:eu,pagination:el,order:ec}=(0,A.f)({options:{orderType:"nulls_last"}}),em=(0,n.useMemo)(()=>(e=>{let{accountId:t,locationId:n,jobId:i}=e,r=[];r.push(n?{locationId:{_eq:n}}:{}),r.push(t&&Array.isArray(t)?{accountId:{_in:t}}:t?{accountId:{_eq:t}}:{}),r.push(i?{Invoices:{entityId:{_eq:i}}}:{}),r.push({type:{_in:["proformaInvoice","customerPpmInvoice","supplierPpmInvoice","invoice","customerGroupInvoice"]},paymentStatus:{_in:["unpaid","partial"]}});let a=r.filter(e=>!j.isEmpty(e));return{...a.length>0&&{_and:a}}})({accountId:a,locationId:h,jobId:D}),[a,D,h]),{data:{meta:ep}={meta:{aggregate:{totalCount:0,debitTotal:{debit:0},creditTotal:{credit:0}}}},loading:ef}=(0,r.t)(o,{variables:{...el,accountId:a,locationId:h,orderBy:ec,where:em},onCompleted:e=>{let t=e?.accountEntries?.map((e,t)=>{let n=e.invoices?.[0];return{index:t,id:e.id,type:e.type,jobId:n?.Job?.id,locationId:e.locationId,jobNumber:n?.Job?.number,jobType:n?.Job?.type,invoiceNumber:e.invoiceNumber,createdAt:(0,E.f)(e.createdAt),outstandingdays:e.outstandingdays,outstandingAmount:e.outstandingAmount,amount:0,invoiceId:n?.id,meta:e.meta,accountId:e.accountId}});X("payments",t.map(e=>({outstandingAmount:e.outstandingAmount,accountEntryId:e.id,amount:0}))),z(t)}}),[ey,{isLoading:eh}]=(0,$.f)("/account-entry/payment-received/create",{queryKey:"account-entry-payment-received-create",method:"POST",refetchQueries:M,onCompleted:()=>{V.show({severity:"success",content:"Payment received was added successfully."}),L(),F.refetchQueries({include:U}),O?.()},onError:e=>{V.show({severity:"error",content:`Error: ${e.message}`})}}),eb=(0,n.useCallback)(e=>{let t=ee("payments");X(`payments.${e}.amount`,t[e]?.outstandingAmount??null),Z("amount")},[X,ee,Z]),ev=(0,n.useMemo)(()=>(e=>{let{numberPrefix:n,numberSuffix:i,control:r,errors:a,handleAmountChange:o,trigger:s,isMultiAccount:d,activeAccountId:u}=e;return[{minWidth:140,sortable:!1,headerName:"Number",field:"number",renderCell:e=>{let{row:r}=e;return["customerPpmInvoice","supplierPpmInvoice"].includes(r.type)?`PM ${r.invoiceNumber}`:["customerGroupInvoice"].includes(r.type)?`Multiple / ${r.invoiceNumber}`:r.jobId&&r.jobNumber&&r.jobType?(0,t.jsx)(q.f,{id:r.jobId,number:r.jobNumber,invoiceNumber:r.invoiceNumber,numberPrefix:n,numberSuffix:i,openCanvas:!0,type:r.jobType}):r.invoiceNumber??"N/A"}},{minWidth:120,sortable:!0,headerName:"Date",field:"createdAt"},{flex:1,sortable:!0,headerName:"Days Outstanding",field:"outstandingdays"},{flex:1,minWidth:160,sortable:!0,headerName:"Amount Outstanding",field:"outstandingAmount",renderCell:e=>{let{row:t}=e;return(0,k.f)(t.outstandingAmount)}},{flex:1,minWidth:250,sortable:!1,headerName:"Reconciled Amount",field:"amount",renderCell:e=>{let{row:n}=e,i=d&&null!==u&&n.accountId!==u;return(0,t.jsxs)(l.f,{direction:"row",sx:i?{opacity:.4}:void 0,children:[(0,t.jsx)(x.e,{control:r,defaultValue:n.id,name:`payments.${n.index}.accountEntryId`,render:e=>{let{value:n,onChange:i}=e;return(0,t.jsx)("input",{type:"hidden",value:n,onChange:i})}}),(0,t.jsx)(x.e,{control:r,defaultValue:n.outstandingAmount,name:`payments.${n.index}.outstandingAmount`,render:e=>{let{value:n,onChange:i}=e;return(0,t.jsx)("input",{type:"hidden",value:n,onChange:i})}}),(0,t.jsx)(x.e,{control:r,defaultValue:null,name:`payments.${n.index}.amount`,render:e=>{let{value:r,onChange:o}=e;return(0,t.jsx)(v.f,{leftLabel:(0,t.jsx)(I.default,{sx:{height:"18px"}}),rightLabel:"Ex VAT",type:"number",inputProps:{min:0,step:.01},value:r,disabled:i,onChange:e=>{""===e.target.value?o(null):o(e),s("amount")},fullWidth:!0,error:!!a?.payments?.[n.index]?.amount})}}),(0,t.jsx)(N.f,{onClick:()=>o(n.index),disabled:i,children:(0,t.jsx)(P.default,{})})]})}}]})({numberPrefix:H,numberSuffix:Y,control:B,errors:W,handleAmountChange:eb,trigger:Z,isMultiAccount:er,activeAccountId:ei}),[H,Y,B,W,eb,Z,er,ei]),eI=(0,n.useMemo)(()=>en.reduce((e,t)=>e+(Number.isNaN(t?.amount)?0:Number(t?.amount)),0),[en]);return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(f.f,{sx:{zIndex:1e5},open:eh,children:(0,t.jsx)(s.f,{color:"secondary"})}),(0,t.jsx)("form",{id:"offCanvasForm",onSubmit:K(e=>{ei&&ey({body:{dateReceived:e.dateReceived,amount:e.amount,paymentReference:e.paymentReference,comment:e.comment,payments:e.payments.filter(e=>e.amount&&!Number.isNaN(Number(e.amount))&&Number(e.amount)>0).map(e=>({amount:Number(e.amount),accountEntryId:e.accountEntryId})),accountId:ei}})}),children:(0,t.jsxs)(l.f,{width:"100%",children:[(0,t.jsxs)(c.f,{container:!0,columnSpacing:2,rowSpacing:2,children:[(0,t.jsx)(c.f,{item:!0,xs:6,children:(0,t.jsx)(x.e,{control:B,defaultValue:(0,w.default)(),name:"dateReceived",render:e=>{let{value:n,onChange:i}=e;return(0,t.jsx)(p.f,{format:"DD/MM/YYYY",value:n,onChange:e=>i(e),label:"Date Received",slotProps:{textField:{variant:"outlined",color:"secondary",fullWidth:!0,error:!!W?.dateReceived,helperText:W?.dateReceived?.message}}})}})}),(0,t.jsx)(c.f,{item:!0,xs:6,children:(0,t.jsx)(x.e,{control:B,name:"paymentReference",render:e=>{let{value:n,onChange:i}=e;return(0,t.jsx)(m.f,{label:"Payment Reference",variant:"outlined",color:"secondary",value:n,onChange:i,sx:{width:"100%"},error:!!W?.paymentReference,helperText:W?.paymentReference?.message})}})}),(0,t.jsx)(c.f,{item:!0,xs:6,mt:1,children:(0,t.jsx)(x.e,{control:B,defaultValue:null,name:"amount",render:e=>{let{value:n,onChange:i}=e;return(0,t.jsx)(v.f,{height:"53px",leftLabel:(0,t.jsx)(I.default,{sx:{height:"18px"}}),type:"number",label:"Amount Received",inputProps:{min:0,step:.01},value:n,onChange:e=>{""===e.target.value?i(null):i(e),es(e)},fullWidth:!0,error:!!W?.amount})}})}),(0,t.jsx)(c.f,{item:!0,xs:6,mt:1,children:(0,t.jsx)(x.e,{control:B,name:"comment",render:e=>{let{value:n,onChange:i}=e;return(0,t.jsx)(m.f,{multiline:!0,rows:4,label:"Comment",variant:"filled",color:"secondary",value:n,onChange:i,sx:{width:"100%"},error:!!W?.comment,helperText:W?.comment?.message})}})}),(0,t.jsx)(c.f,{item:!0,xs:6,children:(0,t.jsx)(l.f,{alignItems:"flex-start",children:(0,t.jsx)(S.f,{control:(0,t.jsx)(T.f,{color:"success",checked:ea,onChange:(e,t)=>{eo(t),ed(t)}}),label:"Auto Reconcile"})})}),W?.amount&&(0,t.jsx)(c.f,{item:!0,xs:12,mb:2,children:(0,t.jsx)(C.f,{severity:"error",variant:"filled",children:W?.amount?.message})}),er&&null!==ei&&(0,t.jsx)(c.f,{item:!0,xs:12,mb:2,children:(0,t.jsx)(C.f,{variant:"filled",severity:"info",children:"A payment may only be reconciled against invoices belonging to a single customer. Invoices associated with other customers have been disabled and cannot be selected."})})]}),(0,t.jsx)(_.s,{...eu,columns:ev,loading:ef,history:!1,totalCount:ep.aggregate.totalCount,rows:G}),(0,t.jsx)(l.f,{width:"100%",direction:"row",justifyContent:"flex-end",children:(0,t.jsx)(R.f,{label:`Sum: ${(0,k.f)((0,y.f)(eI,2))}`,color:(0,y.f)(eI,2)===(0,y.f)(et,2)?"success":"danger"})})]})})]})}],54348)},591394,(e,t,n)=>{var i=e.r(978509);Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var r=i(e.r(421506)),a=e.r(391398);n.default=(0,r.default)((0,a.jsx)("path",{d:"M15 20H5V7c0-.55-.45-1-1-1s-1 .45-1 1v13c0 1.1.9 2 2 2h10c.55 0 1-.45 1-1s-.45-1-1-1m5-4V4c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h9c1.1 0 2-.9 2-2m-2 0H9V4h9z"}),"ContentCopyRounded")},741850,(e,t,n)=>{var i=e.r(978509);Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var r=i(e.r(421506)),a=e.r(391398);n.default=(0,r.default)((0,a.jsx)("path",{d:"M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2m6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56M12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96M4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56m2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8M12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96M14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2m.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56M16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2z"}),"Language")},16135,e=>{var t=e.i(800884);e.s(["f",()=>t.f])}])})();
